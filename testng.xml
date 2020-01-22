@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" parallel="false">
+
+    <test name="GoogleSearchUITest" >
+        <parameter name="queryTextParameter"  value="PARAMETER FROM TESTNG.XML"/>
+        <classes>
+            <class name="GoogleSearchTest" >
+                <methods>
+                    <include name="test001"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="GoogleSearchUITest2" >
+        <parameter name="queryTextParameter"  value="ANOTHER PARAMETER FROM TESTNG.XML"/>
+        <classes>
+            <class name="GoogleSearchTest" >
+                <methods>
+                    <include name="test001"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
